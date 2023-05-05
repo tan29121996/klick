@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "my-nextron-app",
+  "description": "My application description",
+  "version": "1.0.0",
+  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron",
+    "build": "nextron build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@heroicons/react": "^1.0.6",
+    "@mui/material": "^5.10.11",
+    "axios": "^0.27.2",
+    "cookies-next": "^2.1.1",
+    "electron-serve": "^1.1.0",
+    "electron-store": "^8.1.0",
+    "firebase": "^9.12.1",
+    "gsap": "^3.11.3",
+    "moment": "^2.29.4",
+    "next-auth": "^4.0.0-beta.7",
+    "react-moment": "^1.1.2",
+    "react-native-mask-image": "^0.1.1",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "electron": "^20.1.0",
+    "electron-builder": "^23.3.3",
+    "next": "^12.2.5",
+    "nextron": "^8.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "video.js": "^7.20.3"
+  }
+}

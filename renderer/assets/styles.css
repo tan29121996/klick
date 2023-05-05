@@ -1,0 +1,84 @@
+
+body {
+  font-family: 'Space Grotesk';
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 100px;
+  background: transparent;
+}
+
+#slider::-webkit-slider-runnable-track {
+  height: 7px;
+  cursor: pointer;
+  margin-top: 4px;
+  background: transparent;
+  box-shadow: 0px 0px 20px #271e32;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 13px;
+  width: 13px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 13px;
+  margin-top: -3px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100px;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 13px;
+  width: 13px;
+  background-image: url('https://image.similarpng.com/very-thumbnail/2020/10/Glossy-white-button-badge-on-transparent-background-PNG.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 13px;
+  margin-top: -3px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 7px;
+  cursor: pointer;
+  margin-top: 4px;
+  background: linear-gradient(to right, #4b64b9, #804bbd);
+  border-radius: 5px;
+}
+
+#non-select {
+  -webkit-user-select: none;
+}
+
+#click {
+  cursor: pointer;
+}
+
+#movie-text {
+  -webkit-user-select: none;
+  color: #e2e6f0;
+}
+
+#title-bar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+#title-bar-btns {
+ -webkit-app-region: no-drag;
+ position: fixed;
+ top: -1px;
+ left: -2px;
+}
