@@ -1,2 +1,2 @@
-# Otodecks DJ Audio Player
-[![Video](https://img.youtube.com/vi/T_P5qiybG0A/0.jpg)](https://youtu.be/T_P5qiybG0A)
+# Klick - Social and Entertainment Hub
+[![Video](https://img.youtube.com/vi/QMU3wpQUmUA/0.jpg)](https://youtu.be/QMU3wpQUmUA)
