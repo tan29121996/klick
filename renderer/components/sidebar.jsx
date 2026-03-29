@@ -1,5 +1,5 @@
 import React from "react";
-import Selected from './Selected';
+import Selected from './selected';
 import Tabs from './Tabs';
 import {useState} from 'react';
 
