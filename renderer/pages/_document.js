@@ -11,14 +11,17 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (typeof global === 'undefined') {
-                window.global = window;
-              }
-            `,
-          }}
-        />
+            dangerouslySetInnerHTML={{
+              __html: `
+                if (typeof global === 'undefined') {
+                  window.global = window;
+                }
+                if (typeof require === 'undefined') {
+                  window.require = () => ({}); 
+                }
+              `,
+            }}
+          />
           <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"/>

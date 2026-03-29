@@ -2,7 +2,10 @@ import { app, shell } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 
-const electron = require("electron");
+let electron;
+if (typeof window !== 'undefined' && window.process && window.process.type) {
+    electron = require('electron');
+}
 const isProd = process.env.NODE_ENV === 'production';
 
 if (isProd) {
