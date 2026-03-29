@@ -63,15 +63,14 @@ export default function SignIn() {
         key={provider.id} 
         
         onClick={() => {
-  const baseUrl = "https://klick-d6cea.firebaseapp.com/api/auth/signin/google";
-  const callbackUrl = encodeURIComponent("https://klick-d6cea.firebaseapp.com/home");
+  const baseUrl = "https://klick-three.vercel.app/api/auth/signin/google";
+  const callbackUrl = encodeURIComponent("https://klick-three.vercel.app/home");
   
-  // Construct the direct login URL
   const fullUrl = `${baseUrl}?callbackUrl=${callbackUrl}`;
   
-  // This bypasses the NextAuth library entirely and uses Electron's shell directly
   window.open(fullUrl, '_blank');
 }}
+        
         style={{
           display: 'flex',
           width: 240, height: 50,

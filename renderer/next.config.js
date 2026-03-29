@@ -10,6 +10,13 @@ module.exports = {
     if (!isServer) {
       config.target = 'electron-renderer';
     }
+
+    const webpack = require('webpack');
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        global: 'window', 
+      })
+    );
     
     return config;
   },

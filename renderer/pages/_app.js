@@ -1,3 +1,7 @@
+if (typeof window !== 'undefined' && typeof window.global === 'undefined') {
+    window.global = window;
+}
+
 import '../assets/styles.css';
 import { SessionProvider } from "next-auth/react"
 
