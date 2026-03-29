@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    // 1. Grab the "access_token" from the URL hash (#)
+    const hash = window.location.hash.substring(1);
+    const params = new URLSearchParams(hash);
+    const token = params.get('access_token');
+
+    if (token) {
+      // 2. Launch your Electron app using the custom protocol
+      window.location.href = `klick://auth?token=${token}`;
+      
+      // 3. Optional: Close this browser tab after a second
+      setTimeout(() => { window.close(); }, 1000);
+    }
+  </script>
+  <h1>Authenticating... You can close this window.</h1>
+</body>
+</html>
