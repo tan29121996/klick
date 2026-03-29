@@ -1,4 +1,4 @@
-import { app } from 'electron';
+import { app, shell } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 
@@ -24,12 +24,20 @@ if (isProd) {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
+      allowRunningInsecureContent: true,
     }
   });
 
   mainWindow.setBounds({width: 1193, height: 795});
   require("@electron/remote/main").initialize();
   require("@electron/remote/main").enable(mainWindow.webContents);
+
+  mainWindow.webContents.on('will-navigate', (event, url) => {
+  if (!url.startsWith('app://') && url !== 'about:blank') {
+    event.preventDefault();
+    shell.openExternal(url);
+  }
+});
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');

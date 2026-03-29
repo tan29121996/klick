@@ -37,7 +37,18 @@ function Header() {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{ width: 175, height: 20, borderRadius: 5, marginTop: -3.5, backgroundColor: '#2a2c44', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
             <SearchIcon style={{ top: 14, left: 547, position:'absolute', height: 15, color: '#8a8d9f' }} />
-            <input style={{ backgroundColor: 'transparent', borderColor: 'transparent', textAlign: 'center' }} type='text' />
+            <input 
+              style={{ 
+                backgroundColor: 'transparent', 
+                borderColor: 'transparent', 
+                textAlign: 'left', 
+                paddingLeft: 20,
+                width: '100%',
+                outline: 'none',
+                color: '#8a8d9f' 
+              }} 
+              type='text' 
+            />
           </div>
         </div>
       </div>

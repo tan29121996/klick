@@ -20,7 +20,7 @@ function Friends() {
   useEffect(() => {
     const profiles = [...Array(20)].map((_, i) => ({
       fullName: faker.name.fullName(),
-      avatarUrl: faker.image.avatar(),
+      avatarUrl: `https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.fullName()}`,
       id: i,
     }));
 

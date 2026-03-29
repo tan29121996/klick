@@ -104,9 +104,9 @@ function Chat() {
         background: 'linear-gradient(#1e203c, transparent)', }}
       />
       <div style={{ width: 270, height: 752, marginLeft: 20, marginRight: 20, overflowY: 'scroll' }}>
-        {Object.entries(chats)?.map((chat) =>
-          <ChatList {...{ setChatDetails, chat }} />
-        )}
+        {chats?.map((chat) => (
+          <ChatList key={chat.id} setChatDetails={setChatDetails} chat={chat} />
+        ))}
         <div style={{ height: 30 }} />
       </div>
 

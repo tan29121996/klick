@@ -31,11 +31,16 @@ import {
 } from '@heroicons/react/solid';
 
 function Home() {
+  const [isClient, setIsClient] = useState(false);
   const [toggleState, setToggleState] = useState(1);
   const [isOpen, openModal] = useState(false);
   const [loginScreen, openloginScreen] = useState();
   const [movieData, setMovieData] = useState({});
   const { data: session } = useSession();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div>
@@ -108,13 +113,15 @@ function Home() {
             >
               Notifications
             </text>
-
-            <Notifications fullName={faker.name.firstName()} avatarUrl={faker.image.avatar()}/>
-            <Notifications fullName={faker.name.firstName()} avatarUrl={faker.image.avatar()}/>
-            <Notifications fullName={faker.name.firstName()} avatarUrl={faker.image.avatar()}/>
-            <Notifications fullName={faker.name.firstName()} avatarUrl={faker.image.avatar()}/>
-            <Notifications fullName={faker.name.firstName()} avatarUrl={faker.image.avatar()}/>
-
+          {isClient && (
+          <>
+            <Notifications fullName={faker.name.firstName()} avatarUrl={`https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.firstName()}`}/>
+            <Notifications fullName={faker.name.firstName()} avatarUrl={`https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.firstName()}`}/>
+            <Notifications fullName={faker.name.firstName()} avatarUrl={`https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.firstName()}`}/>
+            <Notifications fullName={faker.name.firstName()} avatarUrl={`https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.firstName()}`}/>
+            <Notifications fullName={faker.name.firstName()} avatarUrl={`https://api.dicebear.com/7.x/avataaars/svg?seed=${faker.name.firstName()}`}/>
+            </>
+          )}
           </div>
 
           <text style={{
